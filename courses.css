@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.header {
+    height: 50vh;
+    background: linear-gradient(#000000b9, #000000a4), url(img/throwing\ caps.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+nav .brand {
+    color: #fff;
+    /* text-shadow: #6a6a6a 1px 3px 3px; */
+    padding: 10px 20px 0px 20px;
+}
+
+nav .brand .fab {
+    color: #ff9900;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.85rem;
+    padding: 10px 20px 0px 20px;
+}
+
+nav ul li {
+    list-style: none;
+    position: relative;
+    transition: 1s;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    margin-left: 5px;
+    height: 2px;
+    background: transparent;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 1s;
+}
+
+nav ul li:hover::after {
+    background: #ff9900;
+    width: 80%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* text-shadow: #6a6a6a 1px 3px 3px; */
+}
+
+.header-col {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-col h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    /* text-shadow: 1px 3px 5px #6a6a6a; */
+}
+
+.header-col p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.header-col .btn {
+    border: 1px solid white;
+    width: 190px;
+    padding: 10px;
+    margin: auto;
+    transition: 0.9s;
+    position: relative;
+}
+
+.header-col .btn:hover {
+    background: #ff9900;
+}
+
+
+.header-col .btn::before {
+    content: '';
+    width: 20%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+}
+
+.header-col .btn::after {
+    content: '';
+    width: 20%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
+.header-col .btn:hover::after {
+    background-color: #fff;
+}
+
+.header-col .btn:hover::before {
+    background-color: #fff;
+}
+
+.header-col .btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav ul li:hover::after {
+    background: #ff9900;
+    width: 80%;
+}
+
+
+
+nav label {
+    display: none;
+}
+
+nav #click {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header {
+        display: block;
+    }
+    .header nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+nav ul {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 0px;
+    height: 30vh;
+    font-size: 0.85rem;
+    flex-direction: column;
+    background: #ff9900;
+    padding: 20px 0px 20px 0px;
+    position: absolute;
+    right: 0;
+    top: -1000px;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+
+nav label {
+    padding: 22px 20px 0px 20px;
+    font-size: 1.5rem;
+    color: #ff9900;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1.5s;
+}
+
+nav ul li:hover::after {
+    background: #fff;
+    width: 80%;
+}
+
+#click:checked ~ label {
+    right: 0px;
+    top: -3px;
+    color: #fff;
+    z-index: 2;
+}
+
+#click:checked ~ .menu-btn .fa::before {
+    content: '\f00d';
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#click:checked ~ ul {
+    display: flex;
+    flex-basis: 20%;
+    z-index: 1;
+    top: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#click {
+    display: none;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav label {
+    display: block;
+}
+
+.header-col {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.header-col h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    /* text-shadow: 1px 3px 5px #6a6a6a; */
+}
+
+.header-col p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.header-col .btn {
+    border: 1px solid white;
+    width: 190px;
+    padding: 10px;
+    margin: auto;
+    transition: 0.9s;
+    position: relative;
+}
+
+}
+
+/* Courses */
+
+.courses {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.courses h2 {
+    margin-bottom: 10px;
+}
+
+.courses p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.courses .courses-col {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.courses .courses-row {
+    flex-basis: 32%;
+    background: #ff451218;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.courses .courses-row:hover {
+    box-shadow: 1px 3px 5px gray;
+}
+
+.courses .courses-row h3 {
+    margin-bottom: 20px;
+}
+
+.courses .courses-row p {
+    color: #5f5f5f;
+}
+
+@media (max-width: 700px) {
+    .courses .courses-col {
+        flex-flow: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+/* Facilities */
+
+.facilities {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.facilities h2 {
+    margin-bottom: 10px;
+}
+
+.facilities p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #5f5f5f;
+}
+
+.facilities .facilities-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.facilities .facilities-row {
+    flex-basis: 32%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.facilities-row img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.facilities-row h4 {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.facilities-row p {
+    font-size: 0.8rem;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .facilities .facilities-col {
+        flex-flow: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+
+
+/* Footer */
+
+.footer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer p {
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+.footer .social-icons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.heart {
+    text-align: center;
+}
+
+.footer .heart .fa {
+    color: red;
+}
+
